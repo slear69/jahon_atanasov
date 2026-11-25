@@ -36,7 +36,14 @@ def launch_script(script_name: str, *, elevated: bool = False) -> None:
         )
         return
 
-    arguments = ["-NoExit", "-NoProfile", "-File", str(script_path)]
+    arguments = [
+        "-NoExit",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        str(script_path),
+    ]
     try:
         if elevated and not ctypes.windll.shell32.IsUserAnAdmin():
             shell_execute = ctypes.windll.shell32.ShellExecuteW

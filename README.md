@@ -43,13 +43,13 @@ Choose **Programming setup** or **Gaming setup (administrator)** in the window. 
 You can also run a setup directly:
 
 ```powershell
-powershell.exe -NoProfile -File ".\programing.ps1"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\programing.ps1"
 ```
 
 Run `gaiming.ps1` from an elevated PowerShell window:
 
 ```powershell
-powershell.exe -NoProfile -File ".\gaiming.ps1"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\gaiming.ps1"
 ```
 
 ## Programming setup
